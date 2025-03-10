@@ -2,7 +2,7 @@ const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
 const maxRecords = 251
-const limit = 10
+const limit = 20
 let offset = 0;
 
 function convertWeightToKg(weightInGrams) {
