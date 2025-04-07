@@ -44,7 +44,7 @@
     width: 100vw;
     position: fixed;
     bottom: 0;
-    height: 40px;
+    height: 67px;
     background-color: #e8f2fb;
 }
 
@@ -55,6 +55,11 @@
 
 .home-top{
     color: white;
+    text-shadow:
+    -1px -1px 0 rgba(0, 0, 0, 0.05),
+     1px -1px 0 rgba(0, 0, 0, 0.05),
+    -1px  1px 0 rgba(0, 0, 0, 0.05),
+     1px  1px 0 rgba(0, 0, 0, 0.05);
     font-size: 30px;
 }
 
