@@ -315,4 +315,16 @@ input::placeholder{
     .main-input{
         justify-content: right; 
     }
+    #menu-home{
+        display: none;
+    }
+    
+    .menu-min{
+        display: none;
+    }
+
+    .arrow-top{
+        display: block;
+    }
+    
 }
