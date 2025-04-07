@@ -20,19 +20,26 @@
     <!-- Nosso CSS -->
     <link rel="stylesheet" href="/assets/css/global.css">
     <link rel="stylesheet" href="/assets/css/pokedex.css">
-</head>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-SgOJa3DmI69IUzQ2PVdRZhwQ+dy64/BUtbMJw1MZ8t5HZApcHrRKUc4W0kG879m7" crossorigin="anonymous">
 <body>
     <section class="content">
-        <h1>Pokedex</h1>
-
+        <h1 id="text-pokemon">P<span><img src="Group 8.png" alt="pokeball" class="pokeball"></span>kedex </h1>
+        <form id="pokemon-search-form">
+            <div class="main-input">
+              <div class="space-search">
+                <input type="text" value="" placeholder="Search Pokemon" id="search-pokemon">
+                <button type="submit" id="search-button" class="search-btn">Search</button>
+              </div>
+            </div>
+          </form>
         <ol id="pokemonList" class="pokemons">
             <!-- ..... Pokemons here ..... -->
         </ol>
 
         <div class="pagination">
             <button id="loadMoreButton" type="button">
-                Load More
+                <img src="Group 8.png" alt="pokeball" class="pokeball" id="pokeball-footer">
             </button>
         </div>
 
@@ -45,6 +52,7 @@
     <script src="/assets/js/pokemon-model.js"></script>
     <script src="/assets/js/poke-api.js"></script>
     <script src="/assets/js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.5/dist/js/bootstrap.bundle.min.js" integrity="sha384-k6d4wzSIapyDyv1kpU366/PK5hCdSbCRGRCMv+eplOQJWyd1fbcAu9OCUj5zNLiq" crossorigin="anonymous"></script>
 </body>
 
 </html>

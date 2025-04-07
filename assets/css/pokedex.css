@@ -1,3 +1,72 @@
+.main-input{
+    display: flex; align-items: center; justify-content: center; margin: 30px 0;
+}
+
+.space-search{
+  text-align: center;
+  width: 305px;
+  height: 53px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom,rgb(213, 217, 255),rgb(231, 233, 255));
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.075);
+}
+
+.space-search input{
+    width: 200px;
+    height: 45px;
+    margin-right: 10px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    padding-left: 15px;
+    letter-spacing: 0.8px;
+    font-size: 14px;
+}
+
+.search-btn{
+    height: 45px;
+    padding: 0 16px;
+    border: none;
+    outline: none;
+    background-color: rgb(255, 255, 255);
+    border-radius: 30px;
+    letter-spacing: 0.8px;
+    color: rgba(0, 0, 0, 0.4);
+    font-size: 14px;
+    transition: 0.3s ease-in-out;
+}
+
+.search-btn:hover{
+    background: linear-gradient(to bottom,rgb(213, 217, 255),rgb(231, 233, 255));
+    color: white;
+}
+
+input::placeholder{
+    opacity: .5;
+}
+
+.reset-button {
+    background: rgb(166, 198, 255);
+    color: white;
+    border: none;
+    border-radius: 30px;
+    padding: 8px 15px;
+    margin: 10px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s ease-in-out;
+}
+
+.reset-button:hover {
+    background-color: #c0a7ff;
+}
+
 .pokemons {
     display: grid;
     grid-template-columns: 1fr;
@@ -138,21 +207,48 @@
 }
 
 .pagination button {
-    padding: .25rem .5rem;
-    margin: .25rem 0;
-    font-size: .625rem;
-    color: #fff;
-    background-color: #678fee;
+    background-color: transparent;
     border: none;
-    border-radius: 1rem;
     cursor: pointer;
-    transition: 0.3s ease-in-out;
 }
 
-.pagination button:hover{
-    background-color: #6f38f6;
-    transform: scale(.9);
+.pokeball{
+    width: 30px;
+    height: 30px;
 }
+
+#pokeball-footer{
+    animation: poke 1.8s ease-in-out infinite;
+}
+
+#pokeball-footer:hover{
+    animation: pokerotate 1.8s ease-in-out infinite;
+}
+
+@keyframes poke {
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.2);
+    }
+    100%{
+        transform: scale(1);
+    }
+}
+
+@keyframes pokerotate {
+    0% {
+      transform: rotate(0deg) scale(1);
+    }
+    50%{
+        transform: rotate(180deg) scale(1.2);
+    }
+    100% {
+      transform: rotate(360deg) scale(1);
+    }
+  }
+  
 
 .abilities{
     position: relative;
@@ -196,7 +292,7 @@
     margin: 0;
     font-style: italic;
     font-size: 14px;
-    opacity: .6;
+    opacity: .3;
     font-weight: 300;
 }
 
@@ -215,5 +311,8 @@
 @media screen and (min-width: 992px) {
     .pokemons {
         grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .main-input{
+        justify-content: right; 
     }
 }
