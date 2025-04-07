@@ -1,8 +1,8 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
-const maxRecords = 451
-const limit = 10
+const maxRecords = 2000
+const limit = 200
 let offset = 0;
 
 function convertWeightToKg(weightInGrams) {
@@ -54,6 +54,7 @@ loadPokemonItens(offset, limit)
 
 loadMoreButton.addEventListener('click', () => {
     offset += limit
+    console.log("Offset atual:", offset); // Linha de depuração
     const qtdRecordsWithNexPage = offset + limit
 
     if (qtdRecordsWithNexPage >= maxRecords) {

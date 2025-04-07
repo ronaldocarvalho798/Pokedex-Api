@@ -5,8 +5,11 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     const pokemon = new Pokemon()
     pokemon.number = pokeDetail.id
     pokemon.name = pokeDetail.name
-    pokemon.ability = pokeDetail.abilities[0].ability.name;
-    pokemon.abilityTwo = pokeDetail.abilities[1].ability.name;
+
+    pokemon.ability = pokeDetail.abilities[0]?.ability.name || "";
+    
+    pokemon.abilityTwo = pokeDetail.abilities.length > 1 ? pokeDetail.abilities[1].ability.name : "";
+
     pokemon.weight = pokeDetail.weight
     pokemon.height = pokeDetail.height
 
@@ -16,7 +19,7 @@ function convertPokeApiDetailToPokemon(pokeDetail) {
     pokemon.types = types
     pokemon.type = type
 
-    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default
+    pokemon.photo = pokeDetail.sprites.other.dream_world.front_default || pokeDetail.sprites.other["official-artwork"].front_default;
 
     return pokemon
 }
