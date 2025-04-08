@@ -17,7 +17,6 @@
 }
 
 .space-search input{
-    width: 200px;
     height: 45px;
     margin-right: 10px;
     border: none;
@@ -248,20 +247,106 @@ input::placeholder{
       transform: rotate(360deg) scale(1);
     }
   }
-  
 
-.abilities{
+.cont{
+    max-height: 130px;
     position: relative;
     bottom: 20px;
-    margin: 0 .5rem .5rem;
-    padding: 1rem .9rem;
+    overflow: hidden;
+    margin: .1rem;
+    border-radius: 1rem;
+}  
+
+.slider{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease;
+}
+  
+.page1{
+    padding: 1rem .8rem;
     border-radius: 1rem;
     display: grid;
-    grid-template-columns: auto 1fr; /* Define duas colunas: uma para os rótulos e outra para os valores */
-    gap: 10px 35px; /* Ajusta o espaçamento entre os spans */
+    grid-template-columns: auto 1fr; 
+    gap: 10px 33px;
     background-color: rgb(255, 255, 255);
-    box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 }
+
+.page2{
+    padding: 1rem .8rem;
+    background-color: white;
+    text-align: center;
+    font-weight: 400;
+    font-size: .8rem;
+    color: rgba(0, 0, 0, 0.873);
+    border-radius: 1rem;
+}
+
+.abilities{
+    width: 100%;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+.btn-slide{
+    right: 9px;
+    bottom: 45%;
+    font-size: 13px;
+    border: none;
+    background-color: transparent;
+}
+
+.ir{
+    position: absolute;
+}
+
+.stat {
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 2px 0;
+  }
+
+  .stat-name {
+    text-align: center;
+    font-weight: 400;
+    margin: 0;
+    font-size: .8rem;
+    color: rgba(0, 0, 0, 0.786);
+  }
+
+  .bar-container {
+    background: #ddd;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 5px;
+    width: 50%;
+  }
+
+  .bar {
+    height: 100%;
+    border-radius: 20px;
+    transition: width 0.5s ease-in-out;
+  }
+
+  
+  .bar.low {
+    background-color: #ef5350; 
+  }
+
+  .bar.medium {
+    background-color: #fecf2f; 
+  }
+
+  .bar.good {
+    background-color: #00FF7F; 
+  }
+
+  .bar.strong {
+    background-color: #00FF7F; 
+  }
 
 .abilities span{
    font-size: .8rem;
@@ -327,5 +412,4 @@ input::placeholder{
     .arrow-top{
         display: block;
     }
-    
 }
